@@ -36,7 +36,12 @@
 }
 
 .solar {
-
+    --cinza0: #90b98f;
+    --cinza1: #a19a31;
+    --cinza2: ;
+    --cinza3: #7a6602;
+    --cinza4: #00568f;
+    --cinza5: #012964;
 }
 
 body {
@@ -70,16 +75,31 @@ a {
 }
 header {
     padding: 1em;
-    background: purple;
+    background: var(--roxo2);
     margin-bottom: 1em;
     color: aliceblue;
     padding-bottom: 3.5em;
     text-align: center;
-    clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 #logo {
     height: 310.5px;
     width: 497.5px;
+}
+@keyframes arcodairis {
+    from{
+        rotate: 0deg;
+      filter: hue-rotate(0deg);
+    }
+    to {
+        /* rotate: 360deg;  */
+      filter: hue-rotate(360deg);
+    }
+}
+#logo:hover{
+   animation: arcodairis 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate-reverse;
 }
 ul li ul.dropdown li {
     display: flex;
@@ -88,7 +108,8 @@ ul li ul.dropdown li {
 }
 ul li ul.dropdown {
  width: 25%;
- background-color: var(--Amarelo);
+height: 100px;
+ background-color: var(--bg-solar);
  position: absolute;
  z-index: 23;
  display: none;
